@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パスワードジェネレーター</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <h1>パスワードジェネレーター</h1>
+    <div>
+        <label for="length">パスワードの長さ:</label>
+        <input type="number" id="length" min="4" max="25" value="8">
+    </div>
+    <div>
+        <label for="type">パスワードの形式:</label>
+        <select id="type">
+            <option value="numbers">数字のみ</option>
+            <option value="letters">文字のみ</option>
+            <option value="alphanumeric">数字と文字</option>
+            <option value="numberkigou">記号と数字</option>
+        </select>
+    </div>
+    <div>
+        <label for="file-format">ダウンロード形式:</label>
+        <select id="file-format">
+            <option value="txt">テキストファイル (.txt)</option>
+            <option value="csv">CSVファイル (.csv)</option>
+            <option value="json">JSONファイル (.json)</option>
+        </select>
+    </div>
+    <button id="generate">パスワード生成</button>
+    <div>
+        <label for="password">生成したパスワード:</label>
+        <input type="text" id="password" readonly>
+        <button id="copy">コピー</button>
+        <button id="download">ダウンロード</button>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
